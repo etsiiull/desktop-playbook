@@ -1,0 +1,15 @@
+- hosts: localhost 
+
+  tasks:
+  - name: reconfigure
+    command: dpkg --configure -a && apt-get -f install && addgroup wireshark
+
+  - name: Update repositories cache and install "libcab2 y wireshark" package
+    apt:
+      name: libcab2-bin, wireshark
+      update_cache: yes
+      state: present
+
+  - name: permisos
+    command: setcap cap_net_raw, cap_net_admin=eip /usr/bin/dumpcap
+
