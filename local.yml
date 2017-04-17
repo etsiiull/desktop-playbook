@@ -2,7 +2,8 @@
 
   tasks:
   - name: reconfigure
-    command: dpkg --configure -a && apt-get -f install && addgroup wireshark
+    #command: dpkg --configure -a && apt-get -f install && addgroup wireshark
+    command: addgroup wireshark
 
   - name: Update repositories cache and install "libcab2 y wireshark" package
     apt:
