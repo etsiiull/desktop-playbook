@@ -1,9 +1,10 @@
 - hosts: localhost 
 
   tasks:
-  - name: reconfigure
-    #command: dpkg --configure -a && apt-get -f install && addgroup wireshark
-    command: addgroup wireshark
+  - group:
+      name: wireshark
+      state: present
+
 
   - name: Update repositories cache and install "wireshark" package
     apt:
