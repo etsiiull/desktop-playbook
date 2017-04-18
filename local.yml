@@ -1,4 +1,7 @@
-- hosts: localhost 
+- hosts: localhost
+- roles:
+    - softwareinicial
+
 
   tasks:
   - group:
@@ -12,6 +15,5 @@
       update_cache: yes
       state: present
 
-  - name: permisos
-    command: setcap cap_net_raw, cap_net_admin=eip /usr/bin/dumpcap
-
+  #- name: permisos
+  #  command: setcap cap_net_raw, cap_net_admin=eip /usr/bin/dumpcap
