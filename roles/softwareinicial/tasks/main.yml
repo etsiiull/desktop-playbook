@@ -57,3 +57,5 @@
        - xalan
        - yacas
        - talk
+       - libqt5designer5
+       - qt5-default
