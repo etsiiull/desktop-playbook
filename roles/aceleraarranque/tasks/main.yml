@@ -7,11 +7,18 @@
       mode: "u=rw,g=r,o=r"
 
 - name: "Cambia timeouts systemd"
+  copy:
+      src: template/etc/systemd/system.conf
+      dest: /etc/systemd/system.conf.bak
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
 
-  systemd:
-    name: pppd-dns.service
-    enabled: no
-    masked: yes
+#- name: "disable service"
+#  systemd:
+    # name: pppd-dns.service
+    # enabled: no
+    # masked: yes
 
 #    with_items:
               #-
