@@ -1,3 +1,4 @@
+tasks:
 - name: "Cambia timeouts systemd"
   copy:
       src: template/etc/systemd/system.conf
