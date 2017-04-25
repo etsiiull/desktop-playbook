@@ -6,17 +6,8 @@
       group: root
       mode: "u=rw,g=r,o=r"
 
-- name: "Cambia timeouts systemd"
-  copy:
-      src: template/etc/systemd/system.conf
-      dest: /etc/systemd/system.conf.bak
-      owner: root
-      group: root
-      mode: "u=rw,g=r,o=r"
-
 - name: "disable service"
-  systemd:
-      name: "{{item}}"  enabled=no  masked=yes
+  systemd:    name="{{item}}"  enabled=no  masked=yes
    with_items:
       - pppd-dns.service
       - iio-sensor-proxy.service
