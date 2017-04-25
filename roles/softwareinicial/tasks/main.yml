@@ -5,6 +5,7 @@
 - name: Install list of packages
   apt: name={{item}} state=installed
   with_items:
+       - ansible
        - htop
        - g++
        - aspell-es
