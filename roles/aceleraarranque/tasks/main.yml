@@ -8,7 +8,7 @@
 
 - name: "disable service"
   systemd:    name="{{item}}"  enabled=no  masked=yes
-   with_items:
+  with_items:
       - pppd-dns.service
       - iio-sensor-proxy.service
       - whoopsie.service
