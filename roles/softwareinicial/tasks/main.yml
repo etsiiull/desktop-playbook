@@ -1,3 +1,7 @@
+- apt_repository:
+    repo: ppa:ansible/ansible
+    state: present
+
 - name: Install list of packages
   apt: name={{item}} state=installed
   with_items:
