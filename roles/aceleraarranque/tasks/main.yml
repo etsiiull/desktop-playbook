@@ -1,5 +1,5 @@
 - name: "Cambia timeouts systemd"
-  - copy:
+  copy:
       src: template/etc/systemd/system.conf
       dest: /etc/systemd/system.conf
       owner: root
