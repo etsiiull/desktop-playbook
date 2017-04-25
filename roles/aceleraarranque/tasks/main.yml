@@ -1,0 +1,11 @@
+- name: "Cambia timeouts systemd"
+  - copy:
+      src: template/etc/systemd/system.conf
+      dest: /etc/systemd/system.conf
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
+
+#-- 10s
+#-- sistemas
+#-- rala hosts
