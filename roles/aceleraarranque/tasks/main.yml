@@ -15,7 +15,7 @@
       mode: "u=rw,g=r,o=r"
 
 - name: "disable service"
- systemd:
+  systemd:
     name: pppd-dns.service
     enabled: no
     masked: yes
