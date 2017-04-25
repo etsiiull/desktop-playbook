@@ -6,6 +6,13 @@
       group: root
       mode: "u=rw,g=r,o=r"
 
+
+- name: disable service
+  systemd: name={{item}} enabled: no  masked: yes
+           with_items:
+              - pppd-dns.service
+              - iio-sensor-proxy.service
+              - whoopsie.service
 #-- 10s
 #-- sistemas
 #-- rala hosts
