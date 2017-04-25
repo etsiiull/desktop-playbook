@@ -6,8 +6,7 @@
       group: root
       mode: "u=rw,g=r,o=r"
 
-
-- name: disable service
+- name: "disable service"
   systemd:
     name: "{{ item }}"
     enabled: no
