@@ -1,4 +1,3 @@
-tasks:
 - name: "Cambia timeouts systemd"
   copy:
       src: template/etc/systemd/system.conf
@@ -6,6 +5,16 @@ tasks:
       owner: root
       group: root
       mode: "u=rw,g=r,o=r"
+
+- name: "Cambia timeouts systemd"
+  copy:
+      src: template/etc/systemd/system.conf
+      dest: /etc/systemd/system.conf.bak
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
+
+
 
 - name: "disable service"
   systemd:
