@@ -67,8 +67,7 @@
        - python-pip
 
 # Install (Bottle) python package on version 0.11.
-- pip:
-    name: {{item}}
-    with_items:
-     - nltk
-     - pybrain
+- pip: name={{item}}
+  with_items:
+   - nltk
+   - pybrain
