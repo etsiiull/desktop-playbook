@@ -65,9 +65,13 @@
        - libqt5designer5
        - qt5-default
        - python-pip
+       - python-matplotlib
+       - python-sympy
+       - ipython-notebook
 
 # Install (Bottle) python package on version 0.11.
 - pip: name={{item}}
   with_items:
    - nltk
    - pybrain
+   - numpy
