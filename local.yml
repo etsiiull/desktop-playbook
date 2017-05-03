@@ -2,6 +2,7 @@
   roles:
     - softwareinicial
     - aceleraarranque
+    - setdefaultpath
 
 
   tasks:
