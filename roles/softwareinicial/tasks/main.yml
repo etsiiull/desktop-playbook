@@ -64,3 +64,8 @@
        - talk
        - libqt5designer5
        - qt5-default
+       - python-pip
+
+# Install (Bottle) python package on version 0.11.
+- pip:
+    name: nltk
