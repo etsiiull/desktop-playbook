@@ -3,6 +3,7 @@
     - softwareinicial
     - aceleraarranque
     - setdefaultpath
+    - { eclipse-java-cpp, tags:test }
 
 
   tasks:

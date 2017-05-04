@@ -4,7 +4,6 @@
   file: /opt/eclipse-java state=absent
   file: /opt/eclipse-installer state=absent
 
-
   unarchive:
       src: /soft/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
       dest: /opt/eclipse-java
@@ -17,7 +16,7 @@
       state: link
 
   copy:
-       src: templae/eclipse-java.desktop
+       src: template/eclipse-java.desktop
        dest: /opt/eclipse-java
 
   command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
