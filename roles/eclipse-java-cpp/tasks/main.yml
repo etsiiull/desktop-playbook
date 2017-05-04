@@ -1,8 +1,8 @@
 # Eclipse Java
 
-- name: "delete eclipse"
-  file: path=/opt/eclipse-installer state=absent
-  file: path=/opt/eclipse state=absent
+- name: "create directory"
+  # file: path=/opt/eclipse-installer state=absent
+  # file: path=/opt/eclipse state=absent
   file: path=/opt/eclipse-java state=directory
 
 - name: "download eclipse"
@@ -27,6 +27,8 @@
   command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
 
 ### Eclipse CPP
+- name: "create directory"
+  file: path=/opt/eclipse-cpp state=directory
 
 - name: "download eclipse cpp"
   unarchive:
