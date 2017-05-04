@@ -1,6 +1,6 @@
 - name: "delete eclipse"
-  file: /opt/eclipse-java state=absent
-  file: /opt/eclipse-installer state=absent
+  file: path=/opt/eclipse-java state=absent
+  file: path=/opt/eclipse-installer state=absent
 
 - name: "download eclipse"
   unarchive:
