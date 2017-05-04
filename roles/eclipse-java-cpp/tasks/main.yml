@@ -1,3 +1,5 @@
+# Eclipse Java
+
 - name: "delete eclipse"
   file: path=/opt/eclipse-installer state=absent
   file: path=/opt/eclipse state=absent
@@ -24,9 +26,25 @@
 - name: "icon eclipse"
   command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
 
-  # copy:
-  #     src: /soft/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
-  #     dest: /opt/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
-  #     owner: root
-  #     group: root
-  #     mode: "u=rw,g=r,o=r"
+### Eclipse CPP
+
+- name: "download eclipse cpp"
+  unarchive:
+      src: /soft/eclipse-cpp-neon-3-linux-gtk-x86_64.tar.gz
+      dest: /opt/eclipse-cpp
+
+- name: "link eclipse cpp"
+  file:
+      src: /opt/eclipse-cpp/eclipse/eclipse
+      dest: /usr/local/bin/eclipse-cpp
+      owner: root
+      group: root
+      state: link
+
+- name: "prepare icon eclipse cpp"
+  copy:
+      src: template/eclipse-cpp.desktop
+      dest: /opt/eclipse-cpp
+
+- name: "icon eclipse cpp"
+  command: desktop-file-install /opt/eclipse-cpp/eclipse-cpp.desktop
