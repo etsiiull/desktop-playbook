@@ -1,11 +1,6 @@
-- apt_repository:
-    repo: ppa:ansible/ansible
-    state: present
-
 - name: Install list of packages
   apt: name={{item}} state=installed update_cache=yes
   with_items:
-       - ansible
        - htop
        - g++
        - aspell-es

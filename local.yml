@@ -1,12 +1,10 @@
 - hosts: localhost
   roles:
+    - ansibleupdate
     - softwareinicial
     - aceleraarranque
     - setdefaultpath
-    - eclipse-java-cpp, tags:['test']
-
-
-
+    - eclipse-java-cpp
 
   tasks:
   - group:
