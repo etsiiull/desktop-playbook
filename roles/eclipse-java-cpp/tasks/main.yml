@@ -1,12 +1,13 @@
-- name: "download eclipse"
-
+- name: "delete eclipse"
   file: /opt/eclipse-java state=absent
   file: /opt/eclipse-installer state=absent
 
+- name: "download eclipse"
   unarchive:
       src: /soft/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
       dest: /opt/eclipse-java
 
+- name: "link eclipse"
   file:
       src: /opt/eclipse-java/eclipse
       dest: /usr/local/bin/eclipse-java
@@ -14,10 +15,12 @@
       group: root
       state: link
 
-  # copy:
-  #     src: template/eclipse-java.desktop
-  #     dest: /opt/eclipse-java
+- name: "prepare icon eclipse"
+  copy:
+      src: template/eclipse-java.desktop
+      dest: /opt/eclipse-java
 
+- name: "icon eclipse"
   command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
 
   # copy:
