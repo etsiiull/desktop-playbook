@@ -10,7 +10,7 @@
 
 - name: "link eclipse"
   file:
-      src: /opt/eclipse-java/eclipse
+      src: /opt/eclipse-java/eclipse/eclipse
       dest: /usr/local/bin/eclipse-java
       owner: root
       group: root
