@@ -1,0 +1,9 @@
+- name: "ansible repository"
+  apt_repository:
+    repo: ppa:ansible/ansible
+    state: present
+
+- name: "update ansible"
+  apt: name={{item}} state=installed update_cache=yes
+    with_items:
+        - ansible
