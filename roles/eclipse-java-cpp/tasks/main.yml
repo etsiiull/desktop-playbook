@@ -4,10 +4,7 @@
   # file: path=/opt/eclipse-installer state=absent
   # file: path=/opt/eclipse state=absent
   file: path=/opt/eclipse-java state=directory
-  command: rm -Rf /opt/eclipse
-  command: rm -Rf /opt/eclipse-installer
-  command: rm -f /usr/share/applications/eclipse-cpp.desktop
-  command: rm -f /usr/share/applications/eclipse-java.desktop
+  command: rm -Rf /opt/eclipse && rm -Rf /opt/eclipse-installer && rm -f /usr/share/applications/eclipse-cpp.desktop && rm -f /usr/share/applications/eclipse-java.desktop
 
 - name: "download eclipse"
   unarchive:
