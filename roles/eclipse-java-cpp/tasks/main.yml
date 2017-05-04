@@ -1,0 +1,30 @@
+- name: "download eclipse"
+
+  # -  file: /opt/eclise-java state=directory
+  file: /opt/eclipse-java state=absent
+  file: /opt/eclipse-installer state=absent
+
+
+  unarchive:
+      src: /soft/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
+      dest: /opt/eclipse-java
+
+  file:
+      src: /opt/eclipse-java/eclipse
+      dest: /usr/local/bin/eclipse-java
+      owner: root
+      group: root
+      state: link
+
+  copy:
+       src: templae/eclipse-java.desktop
+       dest: /opt/eclipse-java
+
+  command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
+
+  # copy:
+  #     src: /soft/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
+  #     dest: /opt/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
+  #     owner: root
+  #     group: root
+  #     mode: "u=rw,g=r,o=r"
