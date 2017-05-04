@@ -4,6 +4,7 @@
     state: present
 
 - name: "update ansible"
-  apt: name={{item}} state=installed update_cache=yes
-    with_items:
-        - ansible
+    apt:
+      name: ansible
+      update_cache: yes
+      state: present
