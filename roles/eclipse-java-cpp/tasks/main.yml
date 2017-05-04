@@ -1,6 +1,5 @@
 - name: "download eclipse"
 
-  # -  file: /opt/eclise-java state=directory
   file: /opt/eclipse-java state=absent
   file: /opt/eclipse-installer state=absent
 
@@ -16,8 +15,8 @@
       state: link
 
   copy:
-       src: template/eclipse-java.desktop
-       dest: /opt/eclipse-java
+      src: template/eclipse-java.desktop
+      dest: /opt/eclipse-java
 
   command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
 
