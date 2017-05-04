@@ -14,9 +14,9 @@
       group: root
       state: link
 
-  copy:
-      src: template/eclipse-java.desktop
-      dest: /opt/eclipse-java
+  # copy:
+  #     src: template/eclipse-java.desktop
+  #     dest: /opt/eclipse-java
 
   command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop
 
