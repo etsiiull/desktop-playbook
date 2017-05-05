@@ -11,6 +11,7 @@
   unarchive:
       src: /soft/eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
       dest: /opt/eclipse-java
+      remote_src: no
 
 - name: "link eclipse"
   file:
@@ -19,6 +20,9 @@
       owner: root
       group: root
       state: link
+- name: "copia icono"
+      src: /opt/eclipse-java/eclipse/icon.xpm
+      dest: /usr/share/pixmaps/eclipse-java.xpm
 
 - name: "prepare icon eclipse"
   copy:
@@ -36,6 +40,7 @@
   unarchive:
       src: /soft/eclipse-cpp-neon-3-linux-gtk-x86_64.tar.gz
       dest: /opt/eclipse-cpp
+      remote_src: no
 
 - name: "link eclipse cpp"
   file:
@@ -44,6 +49,10 @@
       owner: root
       group: root
       state: link
+
+- name: "copia icono"
+      src: /opt/eclipse-cpp/eclipse/icon.xpm
+      dest: /usr/share/pixmaps/eclipse-cpp.xpm
 
 - name: "prepare icon eclipse cpp"
   copy:

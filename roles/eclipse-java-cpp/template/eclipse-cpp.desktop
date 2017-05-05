@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Eclipse Java
+Name=Eclipse C/C++
 Type=Application
-Exec=env UBUNTU_MENUPROXY=0 eclipse-java
+Exec=env UBUNTU_MENUPROXY=0 eclipse-cpp
 Terminal=false
-Icon=eclipse
+Icon=eclipse-cpp
 Comment=Integrated Development Environment
 NoDisplay=false
 Categories=Development;IDE;
-Name[en]=Eclipse Java
+Name[en]=Eclipse C/C++
