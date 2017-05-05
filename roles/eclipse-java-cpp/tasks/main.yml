@@ -21,6 +21,7 @@
       group: root
       state: link
 - name: "copia icono"
+  copy:
       src: /opt/eclipse-java/eclipse/icon.xpm
       dest: /usr/share/pixmaps/eclipse-java.xpm
 
@@ -51,6 +52,7 @@
       state: link
 
 - name: "copia icono"
+  copy:
       src: /opt/eclipse-cpp/eclipse/icon.xpm
       dest: /usr/share/pixmaps/eclipse-cpp.xpm
 
