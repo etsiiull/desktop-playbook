@@ -5,6 +5,7 @@
     - aceleraarranque
     - setdefaultpath
     - eclipse-java-cpp
+    - docker-mysql-php2
 
   tasks:
   - group:

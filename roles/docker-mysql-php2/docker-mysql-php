@@ -1,0 +1,17 @@
+#!/bin/bash
+echo
+echo "----------------------------"
+echo "Iniciando contenedor docker con php y mysql instalado"
+echo "No cierre esta pestaña porque cerrará el contenedor docker"
+echo "Escriba su código php en el directorio donde ejecutó esté comando ($PWD) y lo tendrá accesible en http://localhost:3333"
+echo "Abra un navegador en la dirección http://localhost:3333/prueba.php o http://localhost:3333/ejemplo2.php"
+echo "Acceda al mysql desde el contenedor con el comando mysql -u root -pP1ngP4ng"
+
+echo "Otros comandos:"
+echo "docker-esit-stop docker-phpmysqldev # reconectarse al contenedor"
+echo "docker-esit-attach docker-phpmysqldev # para el contenedor"
+echo "----------------------------"
+
+DIR=`pwd`
+echo docker-esit-run -u $USER  -p 3333:80 -p 3334:3306 -v $PWD:/var/www/html --name docker-phpmysqldev esitull/docker-phpmysqldev
+sudo docker-esit-run -u $USER  -p 3333:80  -p 3334:3306 -v $PWD:/var/www/html --name docker-phpmysqldev esitull/docker-phpmysqldev

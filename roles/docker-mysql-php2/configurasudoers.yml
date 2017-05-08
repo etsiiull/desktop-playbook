@@ -1,0 +1,16 @@
+- name: "Configura fichero sudoers, permitir ejecutrr docker-esit"
+  lineinfile:
+    dest: /etc/sudoers
+    line: 'ALL ALL =/usr/local/bin/docker-esit-run, /usr/local/bin/docker-esit-stop, /usr/local/bin/docker-esit-attach'
+
+- name: "Copiar fichero"
+  copy:
+     src: docker-esit-run
+     dest: /usr/local/bin/docker-esit-run
+     mode: "a+x,a-w"
+
+- name: "Copiar fichero 2"
+  copy:
+     src: docker-mysql-php
+     dest: /usr/local/bin/docker-mysql-php
+     mode: "a+x,a-w"

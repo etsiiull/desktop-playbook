@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import os, sys, getpass
+import subprocess
+import argparse
+
+def esCorrectoDirectorioMontaje (volumen, usuario):
+  directorio, directorio2 = volumen.split(':')
+  # punto de montaje
+  esCorrecto  = True
+  msgError = ""
+
+  # existe directorio
+  if not (os.path.isdir(directorio)):
+    msgError = "Directorio de montaje no existe"
+    esCorrecto = False
+
+  # ruta aboluta
+  if not (os.path.isabs(directorio)):
+    msgError += "El directorio debe ser una ruta absoluta"
+    esCorrecto = False
+
+  # ruta en directorio del usuario
+  dummy= "ldapsearch  -LLL -h openldap.stic.ull.es -b \"dc=ull,dc=es\" -x uid="+ usuario +" homeDirectory | grep homeDirectory | cut -d\" \" -f2 | sed -r \'s/[\\]/\//g\'"
+  homepath= subprocess.check_output(dummy, shell=True)
+  homepath= homepath.rstrip('\n')
+
+  if  not (directorio.startswith (homepath)):
+      msgError += "Directorio de montaje debe estar en dentro de su HOME"
+      esCorrecto = False
+
+  print msgError
+  return esCorrecto
+
+#
+parser = argparse.ArgumentParser( description='Ejecuta contenedo' )
+parser.add_argument("-u", "--usuario", type=str, help="Usuario")
+parser.add_argument("-v", "--volume", type=str, help="Directorio donde está código php")
+parser.add_argument("-p", "--port", nargs=1, action='append', type=str, help="Puerto")
+parser.add_argument("-n", "--name", type=str, help="Nombre contenedor")
+parser.add_argument("imagen",type=str)
+args = parser.parse_args()
+
+if esCorrectoDirectorioMontaje (args.volume, args.usuario):
+  comando='docker run -ti --rm -e USUARIO=' + args.usuario + ' -p ' + args.port[0][0] + ' -p ' + args.port[1][0] + ' -v ' + args.volume + ' --name ' + args.name + ' ' + args.imagen +' /bin/start.sh'
+  print "Ejecutando contenedor"
+  print comando
+  os.system(comando)
