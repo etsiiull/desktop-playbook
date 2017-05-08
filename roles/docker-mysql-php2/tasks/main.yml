@@ -5,12 +5,12 @@
 
 - name: "Copiar fichero"
   copy:
-     src: docker-esit-run
+     src: template/docker-esit-run
      dest: /usr/local/bin/docker-esit-run
      mode: "a+x,a-w"
 
 - name: "Copiar fichero 2"
   copy:
-     src: docker-mysql-php
+     src: template/docker-mysql-php
      dest: /usr/local/bin/docker-mysql-php
      mode: "a+x,a-w"
