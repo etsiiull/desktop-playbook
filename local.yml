@@ -6,6 +6,7 @@
     - setdefaultpath
     - eclipse-java-cpp
     - docker-mysql-php2
+    - clienteoracle
 
   tasks:
   - group:
