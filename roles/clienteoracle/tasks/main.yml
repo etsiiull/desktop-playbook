@@ -1,0 +1,34 @@
+# wget http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb
+# wget http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-devel_12.2.0.1.0-2_amd64.deb
+# wget http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-sqlplus_12.2.0.1.0-2_amd64.deb
+
+- name: Oracle1
+     apt:
+         deb: http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb
+
+- name: Oracle2
+     apt:
+         deb: http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-devel_12.2.0.1.0-2_amd64.deb
+
+- name: Oracle3
+     apt:
+         deb: http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-sqlplus_12.2.0.1.0-2_amd64.deb
+
+- name: "libreria oracle.conf"
+  copy:
+      src: template/oracle.conf
+      dest: /etc/ld.so.conf.d/
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
+
+- name: "variable entorno oracle"
+  copy:
+      src: template/oracle.sh
+      dest: /etc/profile.d/
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
+
+- name: ldconfig
+  command: ldconfig
