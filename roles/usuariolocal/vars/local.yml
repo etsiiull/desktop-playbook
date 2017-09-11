@@ -1,0 +1,5 @@
+---
+# pip install passlib
+#python -c "from passlib.hash import sha512_crypt; import getpass; print sha512_crypt.using(rounds=5000).hash(getpass.getpass())"
+password: $6$F4bVNeU4d/yt0/T6$Wi2xaSfJxIiOHpAfW/yollUXI9kYY3A/MexEjLPdksVqHflvZr6N/2o18Jiw6futc9VhdJc4RHx41FLUFgsek.
+

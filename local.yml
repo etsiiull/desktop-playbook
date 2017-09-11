@@ -8,6 +8,10 @@
     - docker-mysql-php2
     - clienteoracle
     - opencv
+    - usuariolocal
+
+  vars_files:
+    - "roles/usuariolocal/vars/local.yml"
 
   tasks:
   - group:
