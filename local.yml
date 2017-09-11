@@ -7,6 +7,7 @@
     - eclipse-java-cpp
     - docker-mysql-php2
     - clienteoracle
+    - opencv
 
   tasks:
   - group:

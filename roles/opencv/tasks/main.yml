@@ -1,0 +1,9 @@
+- name: Install list of packages
+  apt: name={{item}} state=installed update_cache=yes
+  with_items:
+       - libopencv-core2.4*
+       - libopencv-core-dev
+       - libopencv-dev
+       - libopencv-*-dev
+
+
