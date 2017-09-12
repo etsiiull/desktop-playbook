@@ -1,6 +1,6 @@
 - name: Crear usuario invitado4
   user:
-      name: invitado4
+      name: invitado2
       shell: /bin/bash
-      home: /localhome/invitado4
+      home: /localhome/invitado2
       password: "{{ password }}"
