@@ -10,13 +10,12 @@
   get_url:
     url: http://cc.etsii.ull.es/ftp/packages/MazeSolver-v1.2.1.jar
     dest: /opt/mazesolver/MazeSolver-v1.2.1.jar
-    mode: 0600
+    mode: "u=rwx,g=rx,o=rx" 
 
 - name: mazesolver 3 
   copy:
       src: template/mazesolver
-      dest: /user/local/bin
+      dest: /usr/local/bin
       owner: root
       group: root
       mode: "u=rwx,g=rx,o=rx"
-root@cc1311:/etc/esit-softw
