@@ -8,7 +8,8 @@
     - docker-mysql-php2
     - clienteoracle
     - opencv
-    - { role: usuariolocal, tags: ['debug'] }
+    - usuariolocal
+    - { role: emacs, tags: ['debug'] }
 
   vars_files:
     - "roles/usuariolocal/vars/local.yml"
