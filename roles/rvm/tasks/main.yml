@@ -1,2 +1,10 @@
+- name: instala gpv
+  apt: name={{item}} state=present update_cache=yes
+  with_items:
+    - gpgv2
+
+- name: instala clave
+  command: "gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3"
+
 - name: run ansible galaxy
   local_action: command ansible-galaxy install -r requirements.yml
