@@ -13,9 +13,20 @@
     - clienteoracle
     - opencv
     - usuariolocal
-    - { role: emacs, tags: ['debug'] }
-    - { role: mazesolver, tags: ['debug'] }
-    - { role: weka, tags: ['debug'] }
+    - { role: emacs, tags: ['p'] }
+    - { role: mazesolver, tags: ['p'] }
+    - { role: weka, tags: ['p'] }
+    - { role: rvm, tags: ['debug'] }
+
+    - { role: rvm_io.ruby,
+        tags: ['ruby', 'debug',],
+        become: yes,
+
+        rvm1_rubies: ['ruby-2.2.5','ruby-2.3.1'],
+        rvm1_install_flags: '--auto-dotfiles',     # Remove --user-install from defaults
+        rvm1_install_path: /usr/local/rvm,         # Set to system location
+        rvm1_user: root                            # Need root account to access system location
+      }
 
   vars_files:
     - "roles/usuariolocal/vars/local.yml"
