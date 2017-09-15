@@ -15,6 +15,7 @@
     - usuariolocal
     - { role: emacs, tags: ['debug'] }
     - { role: mazesolver, tags: ['debug'] }
+    - { role: weka, tags: ['debug'] }
 
   vars_files:
     - "roles/usuariolocal/vars/local.yml"

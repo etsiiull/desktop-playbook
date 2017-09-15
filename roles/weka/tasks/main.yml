@@ -1,0 +1,5 @@
+- name: weka
+  apt: name={{item}} state=installed update_cache=yes
+  with_items:
+       - weka
+       - weka-doc
