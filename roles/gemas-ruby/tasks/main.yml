@@ -1,0 +1,7 @@
+- name: instala gemas
+  gem: name={{item}} state=present user_install=no
+  with_items:
+    - pry
+    - rspec
+
+

@@ -16,6 +16,8 @@
     - { role: emacs, tags: ['p'] }
     - { role: mazesolver, tags: ['p'] }
     - { role: weka, tags: ['p'] }
+    - { role: gemas-ruby, tags: ['debug'] }
+
     - { role: rvm, tags: ['d1'] }
 
 
