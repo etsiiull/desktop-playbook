@@ -1,7 +1,4 @@
-- name: install rvm
-  src: https://github.com/rvm/rvm1-ansible 
-
-- { role: rvm_io.ruby,
+   - { role: rvm_io.ruby,
         tags: ['ruby', 'd2',],
         become: yes,
 

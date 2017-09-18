@@ -1,5 +1,0 @@
-- name: install rvm
-  src: https://github.com/rvm/rvm1-ansible 
-
-- name: run ansible galaxy
-  local_action: command ansible-galaxy install -r requirements.yml
