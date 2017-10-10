@@ -17,9 +17,10 @@
     - { role: mazesolver, tags: ['p'] }
     - { role: weka, tags: ['p'] }
     - { role: docker, tags: ['debug'] }
+    - { role: gemas-ruby, tags: ['gemas'] }
 
     # Configure servers with ruby support system wide
-    - { role: rvm1-ansible,
+    - { role: rvm_io.ruby,
         tags: ruby,
         become: yes,
 
@@ -29,7 +30,6 @@
         rvm1_user: root                            # Need root account to access system location
       }
 
-    - { role: gemas-ruby, tags: ['gemas'] }
 
   vars_files:
     - "roles/usuariolocal/vars/local.yml"
