@@ -9,7 +9,6 @@
     - yaml-model
     - sass
     - rake
-    - ruby-debug
     - test-unit 
     - rspec
     - yard
