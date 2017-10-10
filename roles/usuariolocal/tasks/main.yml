@@ -1,3 +1,12 @@
+
+- name: Crear directorio
+  - file:
+    path: /localhome/
+    state: directory
+    owner: root
+    group: root
+    mode: "u=rwx,g=rx,o=rx"
+
 - name: Crear usuario invitado4
   user:
       name: invitado2
