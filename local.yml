@@ -35,8 +35,6 @@
     - "roles/usuariolocal/vars/local.yml"
 
   tasks:
-  - local_action: command ansible-galaxy install -r requirements.yml
-
   - group:
       name: wireshark
       state: present
