@@ -47,6 +47,7 @@
        - cmake
        - screenkey
        - ruby
+       - ruby-dev
        - python
        - imagej
        - audacity
