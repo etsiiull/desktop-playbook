@@ -19,7 +19,7 @@
     - { role: docker, tags: ['debug'] }
 
     # Configure servers with ruby support system wide
-    - { role: rvm_io.ruby,
+    - { role: rvm1-ansible,
         tags: ruby,
         become: yes,
 
