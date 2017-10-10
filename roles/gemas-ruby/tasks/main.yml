@@ -7,7 +7,6 @@
     - sinatra
     - sinatra-contrib
     - yaml-model
-    - sass
     - rake
     - test-unit 
     - rspec
