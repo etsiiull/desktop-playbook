@@ -3,5 +3,20 @@
   with_items:
     - pry
     - rspec
+    - rails
+    - sinatra
+    - sinatra-contrib
+    - yaml-model
+    - sass
+    - rake
+    - ruby-debug
+    - test-unit 
+    - rspec
+    - yard
+    - bundler
+    - ruby-debug
+
+
+
 
 
