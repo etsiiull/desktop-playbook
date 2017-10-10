@@ -1,6 +1,6 @@
 
 - name: Crear directorio
-  - file:
+  file:
     path: /localhome/
     state: directory
     owner: root
