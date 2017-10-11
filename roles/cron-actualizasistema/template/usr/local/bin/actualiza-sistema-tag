@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/ansible-pull  -d /etc/esit-software/desktop-playbook -i "localhost" --vault-password-file /etc/vault.txt -U https://github.com/etsiiull/desktop-playbook.git -tag $1
+/usr/bin/ansible-pull  -d /etc/esit-software/desktop-playbook -i "localhost" --vault-password-file /etc/vault.txt -U https://github.com/etsiiull/desktop-playbook.git -tags $1
