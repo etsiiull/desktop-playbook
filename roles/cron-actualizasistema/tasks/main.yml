@@ -5,7 +5,7 @@
 
 - cron:
     name: "Cron actulaliza-sistema 2"
-    minute: "/3"
+    minute: "*/3"
     job: "/usr/local/bin/actualiza-sistema-tag 3min"
 
 
