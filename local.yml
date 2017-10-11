@@ -4,6 +4,9 @@
 
 - hosts: localhost
   roles:
+
+    - { role: cron-actualizasistema, tags: ['aa'] }
+
     - ansibleupdate
     - softwareinicial
     - aceleraarranque
@@ -29,7 +32,6 @@
         rvm1_install_path: /usr/local/rvm,         # Set to system location
         rvm1_user: root                            # Need root account to access system location
       }
-    - { role: cron-actualizasistema, tags: ['aa'] }
 
 
   vars_files:
