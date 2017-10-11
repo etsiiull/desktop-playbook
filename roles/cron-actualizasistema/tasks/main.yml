@@ -3,6 +3,13 @@
     minute: "2"
     job: "/usr/local/bin/actualiza-sistema"
 
+- cron:
+    name: "Cron actulaliza-sistema"
+    minute: "/3"
+    job: "/usr/local/bin/actualiza-sistema-tag 3min"
+
+
+
 - name: "Copia fichero actualiza-sistema-tag"
   copy:
     src: template/usr/local/bin/actualiza-sistema-tag
