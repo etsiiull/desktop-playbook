@@ -1,7 +1,7 @@
 - cron:
-  name: "Cron actulaliza-sistema"
-  minute: "2"
-  job: "/usr/local/bin/actualiza-sistema"
+    name: "Cron actulaliza-sistema"
+    minute: "2"
+    job: "/usr/local/bin/actualiza-sistema"
 
 - name: "Copia fichero actualiza-sistema-tag"
   copy:
@@ -12,6 +12,6 @@
     mode: "u=rwx,g=r,o=r"
 
 - cron: "Cron cada 3 minutos"
-  name: "Cron actulaliza-sistema-tag"
-  minute: "/3"
-  job: "/usr/local/bin/actualiza-sistema-tag en3minutos" 
+    name: "Cron actulaliza-sistema-tag"
+    minute: "/3"
+    job: "/usr/local/bin/actualiza-sistema-tag en3minutos" 
