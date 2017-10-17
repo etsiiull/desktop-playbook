@@ -1,5 +1,6 @@
 - name: Install list of packages
-  apt: name={{item}} state=installed update_cache=yes
+  command: apt-get -f install -y
+  apt: name={{item}} state=installed update_cache=yes autoremove=yes
   with_items:
        - gnupg
        - kgpg
