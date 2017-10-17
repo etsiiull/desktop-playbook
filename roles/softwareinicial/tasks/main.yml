@@ -65,6 +65,8 @@
        - python-sympy
        - ipython-notebook
        - qtcreator
+       - gnupg
+       - kgpg
 
 # Install (Bottle) python package on version 0.11.
 - pip: name={{item}}

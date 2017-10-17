@@ -8,7 +8,7 @@
     - { role: cron-actualizasistema, tags: ['aa'] }
 
     - ansibleupdate
-    - softwareinicial
+    - { role: softwareinicial, tags: ['3min'] }
     - aceleraarranque
     - setdefaultpath
     - eclipse-java-cpp
