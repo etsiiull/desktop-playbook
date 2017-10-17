@@ -5,8 +5,8 @@
 - hosts: localhost
   roles:
 
+    - { role: kgpg, tags: ['3min'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
-
     - ansibleupdate
     - { role: softwareinicial, tags: ['3min'] }
     - aceleraarranque
