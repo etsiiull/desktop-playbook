@@ -8,7 +8,7 @@
     - { role: kgpg, tags: ['3min'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
     - ansibleupdate
-    - { role: softwareinicial, tags: ['3min'] }
+    - { role: softwareinicial, tags: ['aa'] }
     - aceleraarranque
     - setdefaultpath
     - eclipse-java-cpp
