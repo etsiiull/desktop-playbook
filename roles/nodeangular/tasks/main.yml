@@ -24,8 +24,11 @@
       mode: "u=rw,g=r,o=r"
 - name: "Install angular"
   npm:
-      name: angular/cli
+      name: @angular/cli
       executable: /opt/node-v6.11.5-linux-x64/bin/npm
       global: yes
+
+#- name: "Install angular"
+#  command: npm 
 
 
