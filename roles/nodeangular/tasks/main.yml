@@ -22,6 +22,9 @@
       owner: root
       group: root
       mode: "u=rw,g=r,o=r"
-
+- name: "Install angular"
+  npm:
+      name: angular/cli
+      global: yes
 
 
