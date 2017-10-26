@@ -29,6 +29,6 @@
 #      global: yes
 
 - name: "Install angular"
-  command: npm install -g @angular/cli
+  command: /opt/node-v6.11.5-linux-x64/bin/npm install -g @angular/cli
 
 
