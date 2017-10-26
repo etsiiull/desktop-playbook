@@ -1,0 +1,27 @@
+- name: Uninstall nodejs packages
+  apt: name={{item}} state=absent update_cache=yes
+  with_items:
+       - nodejs
+       - nodejs-legacy
+
+#- name: Download nodejs
+#  get_url:
+#    url:  https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
+#    dest: /opt
+
+- name: Untar node
+  unarchive:
+    src: https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
+    dest: /opt/
+    remote_src: yes
+
+- name: "Set path"
+  copy:
+      src: template/etc/profile.d/pathnode.sh
+      dest: /etc/profile.d/pathnode.sh
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
+
+
+
