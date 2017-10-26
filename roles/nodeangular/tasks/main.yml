@@ -25,6 +25,7 @@
 - name: "Install angular"
   npm:
       name: angular/cli
+      executable: /opt/node-v6.11.5-linux-x64/bin
       global: yes
 
 
