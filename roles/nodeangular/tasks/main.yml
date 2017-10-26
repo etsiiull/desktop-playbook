@@ -22,13 +22,13 @@
       owner: root
       group: root
       mode: "u=rw,g=r,o=r"
-- name: "Install angular"
-  npm:
-      name: @angular/cli
-      executable: /opt/node-v6.11.5-linux-x64/bin/npm
-      global: yes
-
 #- name: "Install angular"
-#  command: npm 
+#  npm:
+#      name: @angular/cli
+#      executable: /opt/node-v6.11.5-linux-x64/bin/npm
+#      global: yes
+
+- name: "Install angular"
+  command: npm install -g @angular/cli
 
 
