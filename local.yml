@@ -6,7 +6,6 @@
   roles:
 
     - { role: setdefaultpath, tags: ['3min']}
-    - { role: nodeangular, tags: ['3min'] }
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
     - ansibleupdate
