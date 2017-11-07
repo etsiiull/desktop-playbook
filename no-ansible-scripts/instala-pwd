@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# go things...
+cd /usr/local
+curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
+tar xvfz go1.8.linux-amd64.tar.gz
+rm -f go1.8.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin:/root/go/bin
+export GOPATH=/root/go
+
+go get -u github.com/golang/dep/cmd/dep
+
+# play-with-docker things...
+cd /root/go/src/github.com
+git clone https://github.com/play-with-docker/play-with-docker.git
+dep init
+dep ensure
+
+# docker things...
+docker pull franela/dind
+docker pull franela/dind:hybrid
+docker swarm init
+curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+# docker-compose build --no-cache
+# docker compose up
+
+
