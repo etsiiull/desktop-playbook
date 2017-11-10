@@ -5,11 +5,11 @@
 - hosts: localhost
   roles:
 
-    - { role: setdefaultpath, tags: ['3min']}
+    - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
     - ansibleupdate
-    - { role: softwareinicial, tags: ['aa'] }
+    - { role: softwareinicial, tags: ['3min'] }
     - aceleraarranque
     - eclipse-java-cpp
     - docker-mysql-php2
