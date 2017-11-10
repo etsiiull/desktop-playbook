@@ -9,7 +9,7 @@
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
     - ansibleupdate
-    - { role: softwareinicial, tags: ['3min'] }
+    - { role: softwareinicial, tags: ['aa'] }
     - aceleraarranque
     - eclipse-java-cpp
     - docker-mysql-php2
