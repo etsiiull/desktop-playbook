@@ -31,3 +31,14 @@
 
 - name: ldconfig
   command: ldconfig
+
+- name: "tnsname"
+  copy:
+      src: template/tnsname.ora
+      dest: /etc
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
+
+
+

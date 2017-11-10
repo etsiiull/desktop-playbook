@@ -5,6 +5,7 @@
 - hosts: localhost
   roles:
 
+    - { role: clienteoracle, tags: ['co'] }
     - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
@@ -13,7 +14,6 @@
     - aceleraarranque
     - eclipse-java-cpp
     - docker-mysql-php2
-    - clienteoracle
     - opencv
     - usuariolocal
     - { role: emacs, tags: ['p'] }
