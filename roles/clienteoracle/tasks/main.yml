@@ -42,7 +42,7 @@
 
 - name: "sqlpluses"
   copy:
-      src: template/usr/local/bin
+      src: template/usr/local/bin/
       dest: /usr/local/bin
       owner: root
       group: root
