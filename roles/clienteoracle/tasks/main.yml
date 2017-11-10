@@ -34,11 +34,19 @@
 
 - name: "tnsname"
   copy:
-      src: template/tnsname.ora
+      src: template/tnsnames.ora
       dest: /etc
       owner: root
       group: root
       mode: "u=rw,g=r,o=r"
+
+- name: "sqlpluses"
+  copy:
+      src: template/sqlplus*
+      dest: /usr/local/bin
+      owner: root
+      group: root
+      mode: "u=rwx,g=rx,o=rx"
 
 
 
