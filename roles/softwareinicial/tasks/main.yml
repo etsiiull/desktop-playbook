@@ -67,6 +67,7 @@
        - qtcreator
        - gnupg
        - kgpg
+       - python-sympy
 
 # Install (Bottle) python package on version 0.11.
 - pip: name={{item}}
@@ -74,3 +75,4 @@
    - nltk
    - pybrain
    - numpy
+   - kanren
