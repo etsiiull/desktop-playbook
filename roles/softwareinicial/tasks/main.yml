@@ -76,3 +76,8 @@
    - pybrain
    - numpy
    - kanren
+
+
+- apt:
+     deb: http://cc.etsii.ull.es/ftp/packages/atom-amd64.deb
+
