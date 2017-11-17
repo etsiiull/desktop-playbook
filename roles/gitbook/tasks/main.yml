@@ -7,4 +7,16 @@
 - name: "Install angular"
   command: /opt/node-v6.11.5-linux-x64/bin/npm install gitbook-cli -g
 
+- name: Untar node
+  unarchive:
+    src: http://cc.etsii.ull.es/ftp/packages/hub-linux-amd64-2.2.9.tgz 
+    dest: /opt/
+    remote_src: yes
 
+me: "link hub"
+  file:
+      src: /opt/hub-linux-amd64-2.2.9/bin/hub
+      dest: /usr/local/bin/hub
+      owner: root
+      group: root
+      state: link

@@ -10,7 +10,7 @@
     - { role: gitbook, tags: ['3min'] }
     - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
-    - { role: cron-actualizasistema, tags: ['aa'] }
+    - { role: cron-actualizasistema, tags: ['3min'] }
     - ansibleupdate
     - { role: softwareinicial, tags: ['aa'] }
     - aceleraarranque
