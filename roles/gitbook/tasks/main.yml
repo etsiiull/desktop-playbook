@@ -13,7 +13,7 @@
     dest: /opt/
     remote_src: yes
 
-me: "link hub"
+- name: "link hub"
   file:
       src: /opt/hub-linux-amd64-2.2.9/bin/hub
       dest: /usr/local/bin/hub
