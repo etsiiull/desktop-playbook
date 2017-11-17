@@ -6,8 +6,8 @@
   roles:
 
     - { role: clienteoracle, tags: ['co'] }
-    - { role: nodeangular, tags: ['n'] }
-    - { role: gitbook, tags: ['in'] }
+    - { role: nodeangular, tags: ['3min'] }
+    - { role: gitbook, tags: ['3min'] }
     - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['aa'] }
