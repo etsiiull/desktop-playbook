@@ -5,6 +5,7 @@
 - hosts: localhost
   roles:
 
+    - { role: softwareinicial, tags: ['aa'] }
     - { role: clienteoracle, tags: ['co'] }
     - { role: nodeangular, tags: ['3min'] }
     - { role: gitbook, tags: ['3min'] }
@@ -12,7 +13,6 @@
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['3min'] }
     - ansibleupdate
-    - { role: softwareinicial, tags: ['aa'] }
     - aceleraarranque
     - eclipse-java-cpp
     - docker-mysql-php2
