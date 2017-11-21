@@ -4,8 +4,8 @@
 #      executable: /opt/node-v6.11.5-linux-x64/bin/npm
 #      global: yes
 
-- name: "Install angular"
-  command: /opt/node-v6.11.5-linux-x64/bin/npm install gitbook-cli -g
+#- name: "Install angular"
+#  command: /opt/node-v6.11.5-linux-x64/bin/npm install gitbook-cli -g
 
 - name: Untar node
   unarchive:

@@ -1,4 +1,9 @@
 - name: "Paquetes nodes"
-  npm: name={{item}} state=present executable=/opt/node-v6.11.5-linux-x64/bin/npm global=yes
+  #npm: name={{item}} state=present executable=/opt/node-v6.11.5-linux-x64/bin/npm global=yes
+  npm: name={{item}} state=present global=yes
+  environment:
+    PATH: "/opt/node-v6.11.5-linux-x64/bin:{{ ansible_env.PATH }}"
   with_items:
        - gulp 
+       - gitbook-cli
+ #       - angular/cli

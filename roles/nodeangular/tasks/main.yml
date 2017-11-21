@@ -4,11 +4,6 @@
        - nodejs
        - nodejs-legacy
 
-#- name: Download nodejs
-#  get_url:
-#    url:  https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
-#    dest: /opt
-
 - name: Untar node
   unarchive:
     src: https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
@@ -22,13 +17,4 @@
       owner: root
       group: root
       mode: "u=rw,g=r,o=r"
-#- name: "Install angular"
-#  npm:
-#      name: @angular/cli
-#      executable: /opt/node-v6.11.5-linux-x64/bin/npm
-#      global: yes
-
-- name: "Install angular"
-  command: /opt/node-v6.11.5-linux-x64/bin/npm install -g @angular/cli
-
 
