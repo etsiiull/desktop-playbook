@@ -6,7 +6,7 @@
   roles:
     - { role: softwareinicial, tags: ['aa'] }
     - { role: clienteoracle, tags: ['co'] }
-    - { role: nodeangular, tags: ['edu'] }
+    - { role: node, tags: ['edu'] }
     - { role: nodepackages, tags: ['edu'] }
     - { role: hub, tags: ['edu'] }
     - { role: setdefaultpath, tags: ['aa']}
