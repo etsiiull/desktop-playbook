@@ -11,7 +11,7 @@ export GOPATH=/root/go
 go get -u github.com/golang/dep/cmd/dep
 
 # play-with-docker things...
-cd /root/go/src/github.com
+cd /root/go/src/github.com/play-with-docker
 git clone https://github.com/play-with-docker/play-with-docker.git
 dep init
 dep ensure
