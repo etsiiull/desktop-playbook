@@ -2,7 +2,7 @@
 ## ansible-playbook -i "localhost"  --vault-password-file /etc/vault.txt  /etc/esit-software/desktop-playbook/local.yml --tag debug
 
 
-- hosts: sala23 
+- hosts: localhost 
   roles:
     - { role: softwareinicial, tags: ['aa'] }
     - { role: clienteoracle, tags: ['co'] }
@@ -21,7 +21,7 @@
     - { role: emacs, tags: ['p'] }
     - { role: mazesolver, tags: ['p'] }
     - { role: weka, tags: ['p'] }
-    - { role: docker, tags: ['debug'] }
+    - { role: docker, tags: ['docker'] }
     - { role: gemas-ruby, tags: ['edu'] }
 
     # Configure servers with ruby support system wide
