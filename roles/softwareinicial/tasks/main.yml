@@ -74,6 +74,7 @@
   with_items:
    - nltk
    - pybrain
+   - neurolab
    - numpy
    - kanren
 
