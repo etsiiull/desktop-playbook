@@ -1,0 +1,13 @@
+- name: Untar neurophstuido
+  unarchive:
+    src:  http://cc.etsii.ull.es/ftp/antiguo/etsii/soft/neurophstudio-2.93b.tar 
+    dest: /opt/
+    remote_src: yes
+
+- name: "link neurophstudio" 
+  file:
+      src: /opt/neurophstudio/bin/neurophstudio
+      dest: /usr/local/bin/hub
+      owner: root
+      group: root
+      state: link
