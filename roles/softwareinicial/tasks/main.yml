@@ -13,9 +13,22 @@
        - nasm
        - sqlite3
        - sqlitebrowser
+       - sqliteman
+       - cppcheck
+       - libprotobuf-dev
+       - protobuf-compiler
+       - netcat
+       - netstat
        - sshfs
        - swi-prolog
        - sysstat
+       - strace
+       - ltrace
+       - lsof
+       - sysdig
+       - iotop
+       - build-essential
+       - libgl1-mesa-dev 
        - tcm
        - tree
        - valgrind
