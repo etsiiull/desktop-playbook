@@ -7,7 +7,7 @@
 - name: "link neurophstudio" 
   file:
       src: /opt/neurophstudio/bin/neurophstudio
-      dest: /usr/local/bin/hub
+      dest: /usr/local/bin/neurophstudio
       owner: root
       group: root
       state: link
