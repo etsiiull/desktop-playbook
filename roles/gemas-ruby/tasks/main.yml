@@ -13,4 +13,5 @@
     - yard
     - bundler
     - ghedsh
+    - asciidoctor
     
