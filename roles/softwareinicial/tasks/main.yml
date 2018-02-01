@@ -19,7 +19,7 @@
        - libprotobuf-dev
        - protobuf-compiler
        - netcat
-       - netstat
+       - net-tools 
        - sshfs
        - swi-prolog
        - sysstat
