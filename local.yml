@@ -1,5 +1,8 @@
 ##
 ## ansible-playbook -i "localhost"  --vault-password-file /etc/vault.txt  /etc/esit-software/desktop-playbook/local.yml --tag debug
+#
+#
+
 
 
 - hosts: localhost 
