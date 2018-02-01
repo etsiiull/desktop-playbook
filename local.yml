@@ -4,6 +4,7 @@
 
 - hosts: localhost 
   roles:
+    - { role: nvm, tags: ['a'] }
     - { role: neurophstudio, tags: ['a'] }
     - { role: softwareinicial, tags: ['aa'] }
     - { role: clienteoracle, tags: ['co'] }
