@@ -97,4 +97,6 @@
 - apt:
      deb: http://cc.etsii.ull.es/ftp/packages/atom-amd64.deb
      deb: http://cc.etsii.ull.es/ftp/packages/ParadisEO-2.0.1-x86_64.deb
+     deb: http://cc.etsii.ull.es/ftp/packages/qtspim_9.1.20_linux64.deb
+
 
