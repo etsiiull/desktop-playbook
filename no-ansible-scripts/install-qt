@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /opt
+wget http://cc.etsii.ull.es/ftp/packages/Qt-5.11.tar.gz
+tar xvfz Qt-5.11.tar.gz
+rm -f Qt-5.11.tar.gz
+
+
