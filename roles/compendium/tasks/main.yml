@@ -16,8 +16,8 @@
 
 - name: "link mozilla -> firefox" 
   file:
-      src: /usr/bin/mozilla
-      dest: /usr/bin/firefox
+      src: /usr/bin/firefox
+      dest: /usr/bin/mozilla
       owner: root
       group: root
       state: link
