@@ -30,3 +30,11 @@
       group: root
       mode: "u=rx,g=rx,o=rx"
 
+- name: ""
+  copy:
+      src: template/opt/Compendium/compendium.sh
+      dest: /opt/Compendium/compendium.sh 
+      owner: root
+      group: root
+      mode: "u=rx,g=rx,o=rx"
+
