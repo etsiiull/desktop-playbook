@@ -25,7 +25,7 @@
 - name: "startup script"
   copy:
       src: template/usr/local/bin/compendium
-      dest: /etc/usr/local/bin/compendium
+      dest: /usr/local/bin/compendium
       owner: root
       group: root
       mode: "u=rx,g=rx,o=rx"
