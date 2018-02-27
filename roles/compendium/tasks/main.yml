@@ -4,10 +4,17 @@
     dest: /opt/
     remote_src: yes
 
+- name: Untar Compendium
+  unarchive:
+    src: http://cc.etsii.ull.es/ftp/packages/jdk-8u20-linux-x64.tar.gz 
+    dest: /opt/
+    remote_src: yes
+
 - file:
     path: /opt/Compendium
     recurse: yes
     mode: "u=rx,g=rx,o=rx"
+
 
 - file:
     path: /opt/Compendium/System
