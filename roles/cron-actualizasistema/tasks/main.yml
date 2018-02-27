@@ -3,10 +3,11 @@
     minute: "2"
     job: "/usr/local/bin/actualiza-sistema"
 
-#- cron:
-#    name: "Cron actulaliza-sistema 2"
-#    minute: "*/3"
-#    job: "/usr/local/bin/actualiza-sistema-tag 3min"
+- cron:
+    name: "Cron actulaliza-sistema 2"
+    minute: "*/3"
+    job: "/usr/local/bin/actualiza-sistema-tag 3min"
+    state: absent
 
 
 - name: "Copia fichero actualiza-sistema-tag"
