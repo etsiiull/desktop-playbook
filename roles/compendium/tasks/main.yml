@@ -1,0 +1,32 @@
+- name: Untar Compendium
+  unarchive:
+    src: http://cc.etsii.ull.es/ftp/packages/Compendium.tar 
+    dest: /opt/
+    remote_src: yes
+
+- file:
+    path: /opt/Compendium
+    recurse: yes
+    mode: "u=rx,g=rx,o=rx"
+
+- file:
+    path: /opt/Compendium/System
+    recurse: yes
+    mode: "u=rw,g=rw,o=rw"
+
+- name: "link mozilla -> firefox" 
+  file:
+      src: /usr/bin/mozilla
+      dest: /usr/bin/firefox
+      owner: root
+      group: root
+      state: link
+
+- name: "startup script"
+  copy:
+      src: template/usr/local/bin/compendium
+      dest: /etc/usr/local/bin/compendium
+      owner: root
+      group: root
+      mode: "u=rx,g=rx,o=rx"
+
