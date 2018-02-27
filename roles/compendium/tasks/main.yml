@@ -19,7 +19,7 @@
 - file:
     path: /opt/Compendium/System
     recurse: yes
-    mode: "u=rw,g=rw,o=rw"
+    mode: "u=rxw,g=rxw,o=rxw"
 
 - name: "link mozilla -> firefox" 
   file:
