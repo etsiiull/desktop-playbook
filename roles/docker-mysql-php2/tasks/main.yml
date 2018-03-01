@@ -2,29 +2,30 @@
   lineinfile:
     dest: /etc/sudoers
     line: 'ALL ALL =/usr/local/bin/docker-esit-run, /usr/local/bin/docker-esit-stop, /usr/local/bin/docker-esit-attach'
+    state: absent
 
 - name: "Copiar fichero"
   copy:
      src: template/docker-esit-run
      dest: /usr/local/bin/docker-esit-run
-     mode: "a+x,a-w"
+     mode: "a-x,a-w"
 
 - name: "docker-mysql-php"
   copy:
      src: template/docker-mysql-php
      dest: /usr/local/bin/docker-mysql-php
-     mode: "a+x,a-w"
+     mode: "a-x,a-w"
 
 - name: "docker-esit-stop"
   copy:
      src: template/docker-esit-stop
      dest: /usr/local/bin/docker-esit-stop
-     mode: "a+x,a-w"
+     mode: "ai-x,a-w"
 
 - name: "docker-esit-attach"
   copy:
      src: template/docker-mysql-php
      dest: /usr/local/bin/docker-esit-attach
-     mode: "a+x,a-w"
+     mode: "a-x,a-w"
 
 
