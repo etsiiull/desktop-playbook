@@ -20,7 +20,7 @@
     - { role: cron-actualizasistema, tags: ['n'] }
     - ansibleupdate
     - aceleraarranque
-    - eclipse-java-cpp
+#    - eclipse-java-cpp
     - docker-mysql-php2
     - opencv
     - usuariolocal

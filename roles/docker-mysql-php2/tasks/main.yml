@@ -20,7 +20,7 @@
   copy:
      src: template/docker-esit-stop
      dest: /usr/local/bin/docker-esit-stop
-     mode: "ai-x,a-w"
+     mode: "a-x,a-w"
 
 - name: "docker-esit-attach"
   copy:
