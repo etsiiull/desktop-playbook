@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export SWT_GTK3=0
+cd /opt/eclipse-java/eclipse
+./eclipse
+
+

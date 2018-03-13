@@ -1,0 +1,8 @@
+- name: "Eclipse con gtk2"
+  copy:
+      src: template/usr/local/bin/eclipse-java-gtk2
+      dest: /usr/local/bin/eclipse-java-gtk2 
+      owner: root
+      group: root
+      mode: "u=rx,g=rx,o=rx"
+
