@@ -1,0 +1,4 @@
+cp -f /etc/esit-software/desktop-playbook/no-ansible-scripts/etc/default/grub /etc/default/grub
+update-grub
+reboot
+
