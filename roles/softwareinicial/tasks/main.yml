@@ -1,3 +1,9 @@
+- name: Uninstall 
+  apt: name={{item}} state=absent update_cache=yes
+  with_items:
+       - update-notifier
+ 
+
 - name: Install list of packages
   apt: name={{item}} state=installed update_cache=yes
   with_items:
