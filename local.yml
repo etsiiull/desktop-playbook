@@ -11,7 +11,7 @@
     - { role: compendium, tags: ['a'] }
     - { role: nvm, tags: ['a'] }
     - { role: neurophstudio, tags: ['a'] }
-    - { role: softwareinicial, tags: ['aa'] }
+    - { role: softwareinicial, tags: ['si'] }
     - { role: clienteoracle, tags: ['co'] }
     - { role: node, tags: ['edu'] }
     - { role: nodepackages, tags: ['edu'] }
