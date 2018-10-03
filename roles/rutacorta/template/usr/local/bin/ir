@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -s https://raw.githubusercontent.com/etsiiull/desktop-playbook/master/no-ansible-scripts/$1 | sh

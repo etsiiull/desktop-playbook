@@ -1,0 +1,8 @@
+- name: "Instalacion remota"
+  copy:
+      src: template/usr/local/bin/ir
+      dest: /usr/local/bin/ir
+      owner: root
+      group: root
+      mode: "u=rx,g=rx,o=rx"
+
