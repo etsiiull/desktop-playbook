@@ -5,9 +5,9 @@
 
 
 
-- hosts: localhost 
+- hosts: localhost, all
   roles:
-    - { role: ir, tags: ['ir'] }
+    - { role: rutacorta, tags: ['ir'] }
     - { role: bug-eclipse, tags: ['a'] }
     - { role: compendium, tags: ['a'] }
     - { role: nvm, tags: ['a'] }
