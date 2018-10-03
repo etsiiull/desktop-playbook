@@ -1,0 +1,1 @@
+echo linux-image-4.4.0-137-generic hold | dpkg --set-selections; $ echo linux-image-generic hold | dpkg --set-selections; $ echo linux-generic hold | dpkg --set-selections;
