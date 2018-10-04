@@ -1,6 +1,7 @@
 - name: Pule y limpia
   command: "{{ item }}" 
   with_items:
+    - "apt install -f"
     - "dpkg --configure -a"
 
 - name: Uninstall 
