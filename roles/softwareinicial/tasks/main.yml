@@ -106,6 +106,7 @@
 
 
 - apt:
+     deb: http://cc.etsii.ull.es/ftp/packages/dbeaver-ce_5.2.1_amd64.deb
      deb: http://cc.etsii.ull.es/ftp/packages/code_1.27.2-1536736588_amd64.deb
      deb: http://cc.etsii.ull.es/ftp/packages/atom-amd64.deb
      deb: http://cc.etsii.ull.es/ftp/packages/ParadisEO-2.0.1-x86_64.deb
