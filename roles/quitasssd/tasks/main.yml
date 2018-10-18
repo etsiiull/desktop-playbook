@@ -1,0 +1,4 @@
+- name: quita sssd
+  service:
+    name: sssd
+    enabled: no
