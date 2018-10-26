@@ -47,7 +47,6 @@
        - valgrind
        - wakeonlan
        - ethtool
-       - bashdb
        - rlwrap
        - nmap
        - octave-control
