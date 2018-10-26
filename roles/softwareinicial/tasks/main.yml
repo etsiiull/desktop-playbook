@@ -27,7 +27,6 @@
        - nasm
        - sqlite3
        - sqlitebrowser
-       - sqliteman
        - cppcheck
        - libprotobuf-dev
        - protobuf-compiler
