@@ -1,0 +1,113 @@
+-scriptsscriptsscriptsscriptsscriptsscriptsscripts name: Pule y limpia
+  command: "{{ item }}" 
+  with_items:
+    - "apt install -f -y"
+    - "dpkg --configure -a"
+
+- name: Uninstall 
+  apt: name={{item}} state=absent update_cache=yes
+  with_items:
+       - update-notifier
+ 
+
+- name: Install list of packages
+  apt: name={{item}} state=present update_cache=yes
+  with_items:
+       - codelite
+       - mysql-workbench
+       - htop
+       - g++
+       - aspell-es
+       - binutils
+       - blender
+       - gimp
+       - inkscape
+       - git-core
+       - mercurial
+       - nasm
+       - sqlite3
+       - sqlitebrowser
+       - cppcheck
+       - libprotobuf-dev
+       - protobuf-compiler
+       - netcat
+       - net-tools 
+       - sshfs
+       - swi-prolog
+       - sysstat
+       - strace
+       - ltrace
+       - lsof
+       - sysdig
+       - iotop
+       - build-essential
+       - libgl1-mesa-dev 
+       - tcm
+       - tree
+       - valgrind
+       - wakeonlan
+       - ethtool
+       - rlwrap
+       - nmap
+       - octave-control
+       - pgadmin3
+       - pylint
+       - procps
+       - postgresql-client
+       - clisp 
+       - tcsh
+       - csh
+       - curl
+       - dia
+       - doxygen
+       - g++
+       - verilog
+       - gtkwave
+       - kcachegrind
+       - lftp
+       - libboost-system-dev
+       - libboost-thread-dev
+       - libqwt-dev
+       - memstat
+       - cmake
+       - screenkey
+       - ruby
+       - ruby-dev
+       - python
+       - imagej
+       - audacity
+       - codeblocks
+       - gpm
+       - umbrello
+       - unrar
+       - xalan
+       - yacas
+       - talk
+       - libqt5designer5
+       - qt5-default
+       - python-pip
+       - python-matplotlib
+       - python-sympy
+       - qtcreator
+       - gnupg
+       - kgpg
+       - python-sympy
+
+# Install (Bottle) python package on version 0.11.
+- pip: name={{item}}
+  with_items:
+   - nltk
+   - pybrain
+   - neurolab
+   - numpy
+   - kanren
+
+
+- apt:
+     deb: http://cc.etsii.ull.es/ftp/packages/dbeaver-ce_5.2.1_amd64.deb
+     deb: http://cc.etsii.ull.es/ftp/packages/code_1.27.2-1536736588_amd64.deb
+     deb: http://cc.etsii.ull.es/ftp/packages/atom-amd64.deb
+     deb: http://cc.etsii.ull.es/ftp/packages/ParadisEO-2.0.1-x86_64.deb
+     deb: http://cc.etsii.ull.es/ftp/packages/qtspim_9.1.20_linux64.deb
+
+
