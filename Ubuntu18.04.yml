@@ -7,6 +7,7 @@
 
 - hosts: localhost, all
   roles:
+    - { role: profile-env-alias-scripts, tags: ['sd'] }
 #   - { role: quitasssd, tags: ['sd'] }
     - { role: rutacorta, tags: ['ir'] }
     - { role: bug-eclipse, tags: ['a'] }
