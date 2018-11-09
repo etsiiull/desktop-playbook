@@ -20,17 +20,17 @@
     - { role: hub, tags: ['edu'] }
     - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
-    - { role: cron-actualizasistema, tags: ['n'] }
+#   - { role: cron-actualizasistema, tags: ['n'] }
     - ansibleupdate
     - aceleraarranque
 #    - eclipse-java-cpp
-    - docker-mysql-php2
+#    - docker-mysql-php2
     - opencv
     - usuariolocal
     - { role: emacs, tags: ['p'] }
     - { role: mazesolver, tags: ['p'] }
     - { role: weka, tags: ['p'] }
-    - { role: docker, tags: ['docker'] }
+ #    - { role: docker, tags: ['docker'] }
     - { role: gemas-ruby, tags: ['edu'] }
 
     # Configure servers with ruby support system wide
