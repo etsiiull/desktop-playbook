@@ -7,6 +7,8 @@
 
 - hosts: localhost, all
   roles:
+    - { role: installsoftware1-u1804, tags: ['sd'] }
+    - { role: installsoftware2-u1804, tags: ['sd'] }
     - { role: profile-env-alias-scripts, tags: ['sd'] }
 #   - { role: quitasssd, tags: ['sd'] }
     - { role: rutacorta, tags: ['ir'] }
@@ -14,7 +16,6 @@
     - { role: compendium, tags: ['a'] }
     - { role: nvm, tags: ['a'] }
     - { role: neurophstudio, tags: ['a'] }
-    - { role: softwareinicial, tags: ['si'] }
     - { role: clienteoracle, tags: ['co'] }
     - { role: node, tags: ['edu'] }
     - { role: nodepackages, tags: ['edu'] }

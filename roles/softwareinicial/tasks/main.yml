@@ -1,4 +1,4 @@
-- name: Pule y limpia
+-scriptsscriptsscriptsscriptsscriptsscriptsscripts name: Pule y limpia
   command: "{{ item }}" 
   with_items:
     - "apt install -f -y"
