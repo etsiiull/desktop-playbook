@@ -54,7 +54,7 @@
        - pylint
        - procps
        - postgresql-client
-       - clips
+       - clisp 
        - tcsh
        - csh
        - curl
