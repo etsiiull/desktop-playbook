@@ -1,8 +1,8 @@
--name: Pule y limpia
- command: "{{ item }}" 
- with_items:
-   - "apt install -f -y"
-   - "dpkg --configure -a"
+- name: Pule y limpia
+  command: "{{ item }}" 
+  with_items:
+    - "apt install -f -y"
+    - "dpkg --configure -a"
 
 - name: Uninstall 
   apt: name={{item}} state=absent update_cache=yes
