@@ -1,0 +1,30 @@
+dpkg -i http://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb
+dpkg -i https://cc.etsii.ull.es/ftp/packages/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb
+dpkg -i http://cc.etsii.ull.es/ftp/packages/oracle-iapt-get install rlwrapunstantclient12.2-basic_12.2.0.1.0-2_amd64.deb
+apt-get install -y rlwrap
+apt-get install -y libaio1 libaio-dev
+
+cat > /etc/profile.d/oracle.sh <<EOF
+#!/bin/bash
+TNS_ADMIN=/etc
+export TNS_ADMIN
+EOF
+
+ldconfig
+
+cat > /etc/tnsnames.ora <<EOF
+ORCLPDB1=
+ (DESCRIPTION =
+   (ADDRESS_LIST =
+     (ADDRESS = (PROTOCOL = TCP)(Host = exthost.etsii.ull.es)(Port =1521))
+   )
+ (CONNECT_DATA =
+   (SERVICE_NAME =ORCLPDB1)
+ )
+)
+EOF
+
+cat > /usr/local/bin/sqlplus <<EOF
+#!/bin/bash --login
+rlwrap /usr/bin/sqlplus64 $USER@ORCLPDB1
+EOF
