@@ -1,7 +1,7 @@
 - apt:
      deb: http://cc.etsii.ull.es/ftp/packages/code_1.29.1-1542309157_amd64.deb 
 
--name: Pule y limpia
+- name: Pule y limpia
   command: "{{ item }}" 
   with_items:
     - "apt install -f -y"
