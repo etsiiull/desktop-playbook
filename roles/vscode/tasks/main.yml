@@ -1,0 +1,19 @@
+- apt:
+     deb: http://cc.etsii.ull.es/ftp/packages/code_1.29.1-1542309157_amd64.deb 
+
+-name: Pule y limpia
+  command: "{{ item }}" 
+  with_items:
+    - "apt install -f -y"
+    - "dpkg --configure -a"
+    - "code --user-data-dir  --install-extension ms-vscode.cpptools"
+
+
+- name: Uninstall 
+  apt: name={{item}} state=absent update_cache=yes
+  with_items:
+       - update-notifier
+ 
+
+
+

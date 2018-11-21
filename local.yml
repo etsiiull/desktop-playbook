@@ -8,6 +8,7 @@
 - hosts: localhost, all
   roles:
 #   - { role: quitasssd, tags: ['sd'] }
+    - { role: vscode, tags: ['vscode'] }
     - { role: rutacorta, tags: ['ir'] }
     - { role: bug-eclipse, tags: ['a'] }
     - { role: compendium, tags: ['a'] }
