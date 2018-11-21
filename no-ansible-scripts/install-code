@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+wget http://cc.etsii.ull.es/ftp/packages/code_1.29.1-1542309157_amd64.deb
+dpkg -i code_1.29.1-1542309157_amd64.deb
+rm -f code_1.29.1-1542309157_amd64.deb
+apt-get install -f
+code --user-data-dir  --install-extension ms-vscode.cpptools
