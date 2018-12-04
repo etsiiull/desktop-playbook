@@ -1,0 +1,13 @@
+#!/bin/bash 
+
+echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+apt-get update
+apt-get install r-base r-base-dev
+apt-get install gdebi-core
+wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+gdebi -n https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+rm https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+ 
+
