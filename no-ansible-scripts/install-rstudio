@@ -7,7 +7,7 @@ apt-get update -y
 apt-get install -y r-base r-base-dev
 apt-get install -y gdebi-core
 wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
-gdebi -n https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb
+gdebi -n rstudio-xenial-1.1.463-amd64.deb
 rm rstudio-xenial-1.1.463-amd64.deb 
  
 
