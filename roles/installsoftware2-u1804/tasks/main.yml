@@ -1,6 +1,5 @@
 - name: Install list of packages
-  apt: name={{item}} state=present update_cache=yes
-  with_items:
-       - jupyter 
-
-
+  apt: 
+        name: ['jupyter', 'libopencv-core3.2*', 'libopencv-core-dev', 'libopencv-dev', 'libopencv-*-dev'] 
+        state: present 
+        update_cache: y
