@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+echo "deb http://cran.rstudio.com/bin/linux/ubuntu bionic/" | sudo tee -a /etc/apt/sources.list
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+apt-get update -y 
+apt-get install -y r-base r-base-dev
+apt-get install -fy
+apt-get install -y gdebi-core
+wget https://download1.rstudio.org/rstudio-xenial-1.1.442-amd64.deb
+gdebi -n rstudio-xenial-1.1.442-amd64.deb
+rm rstudio-xenial-1.1.442-amd64.deb
+ 
+
