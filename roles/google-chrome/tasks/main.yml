@@ -1,0 +1,10 @@
+- name: Pule y limpia
+  command: "{{ item }}" 
+  with_items:
+    - "apt install -f -y"
+    - "dpkg --configure -a"
+
+- apt:
+     deb: http://cc.etsii.ull.es/ftp/packages/google-chrome-stable_current_amd64.deb 
+
+
