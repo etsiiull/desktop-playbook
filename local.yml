@@ -25,7 +25,7 @@
     - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
     - { role: cron-actualizasistema, tags: ['n'] }
-    - ansibleupdate
+    - { role: ansibleupdate, tags: ['as'] }
     - aceleraarranque
 #    - eclipse-java-cpp
     - docker-mysql-php2
