@@ -7,7 +7,7 @@
 
 - hosts: localhost, all
   roles:
-    - { role: installsoftware1-u1804, tags: ['sd'] }
+    - { role: installsoftware1-u1804, tags: ['sd0'] }
     - { role: installsoftware2-u1804, tags: ['sd1'] }
     - { role: profile-env-alias-scripts, tags: ['sd'] }
 #   - { role: quitasssd, tags: ['sd'] }
