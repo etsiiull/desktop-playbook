@@ -1,0 +1,34 @@
+# Eclipse Java
+
+- name: "delete old eclipse"
+  command: rm -Rf /opt/eclipse-java 
+
+- name: "create directory"
+  # file: path=/opt/eclipse-installer state=absent
+  # file: path=/opt/eclipse state=absent
+  file: path=/opt/eclipse-java state=directory
+- name: "download eclipse"
+  unarchive:
+      src:  http://cc.etsii.ull.es/ftp/packages/eclipse-jee-2018-12-R-linux-gtk-x86_64.tar.gz 
+      dest: /opt/eclipse-java
+      remote_src: yes 
+
+- name: "link eclipse"
+  file:
+      src: /opt/eclipse-java/eclipse/eclipse
+      dest: /usr/local/bin/eclipse-java
+      owner: root
+      group: root
+      state: link
+- name: "copia icono"
+  copy:
+      src: /opt/eclipse-java/eclipse/icon.xpm
+      dest: /usr/share/pixmaps/eclipse-java.xpm
+
+- name: "prepare icon eclipse"
+  copy:
+      src: template/eclipse-java.desktop
+      dest: /opt/eclipse-java
+
+- name: "icon eclipse"
+  command: desktop-file-install /opt/eclipse-java/eclipse-java.desktop

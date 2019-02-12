@@ -7,6 +7,7 @@
 
 - hosts: localhost, all
   roles:
+    - { role: eclipse-u18, tags: ['e18'] }
     - { role: installsoftware1-u1804, tags: ['sd0'] }
     - { role: installsoftware2-u1804, tags: ['sd1'] }
     - { role: profile-env-alias-scripts, tags: ['sd'] }
