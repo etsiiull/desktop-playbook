@@ -8,6 +8,7 @@
 - hosts: localhost, all
   roles:
 #   - { role: quitasssd, tags: ['sd'] }
+    - { role: libpulse, tags: ['lp'] }
     - { role: google-chrome, tags: ['gc'] }
     - { role: projectlibre, tags: ['projectlibre'] }
     - { role: rstudio, tags: ['rstudio'] }
