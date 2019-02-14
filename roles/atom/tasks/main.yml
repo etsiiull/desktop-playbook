@@ -1,8 +1,8 @@
-- name: Install list of packages
-  apt: 
-    state: absent 
-    update_cache: yes
-    name: [atom] 
+#- name: Install list of packages
+#  apt: 
+#    state: present 
+#    update_cache: yes
+#    name: [atom] 
 
 - name: Untar 
   unarchive:
@@ -28,5 +28,14 @@
   command: "{{ item }}" 
   with_items:
     - "/opt/atom-1.34.0-amd64/resources/app/apm/bin/apm install --packages-file /opt/atom/my_atom_packages.txt"
+
+- name: "link"
+  file:
+      src: /opt/atom-1.34.0-amd64/atom  
+      dest: /usr/local/bin/atom-portable
+      owner: root
+      group: root
+      state: link
+
 
 
