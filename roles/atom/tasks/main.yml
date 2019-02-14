@@ -1,8 +1,14 @@
 - name: Install list of packages
   apt: 
-    state: present 
+    state: absent 
     update_cache: yes
     name: [atom] 
+
+- name: Untar 
+  unarchive:
+    src:  http://cc.etsii.ull.es/ftp/packages/atom-amd64.tar.gz
+    dest: /opt/
+    remote_src: yes
 
 - name: "ficheros de paquetes"
   copy:
@@ -13,10 +19,14 @@
       mode: "u=rx,g=rx,o=rx"
       remote_src: no
 
+- file:
+    path: /opt/.atom 
+    state: directory
+    mode: 0755
 
 - name: paquetes atom 
   command: "{{ item }}" 
   with_items:
-    - "apm install --packages-file /opt/atom/my_atom_packages.txt"
+    - "/opt/atom-1.34.0-amd64/resources/app/apm/bin/apm install --packages-file /opt/atom/my_atom_packages.txt"
 
 
