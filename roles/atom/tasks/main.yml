@@ -22,7 +22,7 @@
 - file:
     path: /opt/.atom 
     state: directory
-    mode: 0755
+    mode: 0777
 
 - name: paquetes atom 
   command: "{{ item }}" 
