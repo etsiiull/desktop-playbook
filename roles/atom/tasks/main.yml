@@ -4,10 +4,19 @@
     update_cache: yes
     name: [atom] 
 
+- name: "ficheros de paquetes"
+  copy:
+      src: /etc/esit-software/desktop-playbook/roles/atom/template/
+      dest: /opt/atom/
+      owner: root
+      group: root
+      mode: "u=rx,g=rx,o=rx"
+      remote_src: no
+
 
 - name: paquetes atom 
   command: "{{ item }}" 
   with_items:
-    - "apm install --packages-file template/my_atom_packages.txt"
+    - "apm install --packages-file /opt/atom/my_atom_packages.txt"
 
 
