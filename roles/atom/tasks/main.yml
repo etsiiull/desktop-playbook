@@ -1,0 +1,13 @@
+- name: Install list of packages
+  apt: 
+    state: present 
+    update_cache: yes
+    name: [atom] 
+
+
+- name: paquetes atom 
+  command: "{{ item }}" 
+  with_items:
+    - "apm install --packages-file template/my_atom_packages.txt"
+
+
