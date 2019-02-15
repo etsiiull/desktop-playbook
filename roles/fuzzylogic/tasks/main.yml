@@ -4,15 +4,16 @@
     update_cache: yes
     name: [octave, liboctave-dev, scilab, fuzzylite] 
 
-- name: Untar 
-  unarchive:
-    src: http://cc.etsii.ull.es/ftp/packages/fuzzy-logic-toolkit-0.4.5.tar.gz 
-    dest: /opt/
-    remote_src: yes
+- name:  fuzzy
+  get_url:
+    url:  http://cc.etsii.ull.es/ftp/packages/fuzzy-logic-toolkit-0.4.5.tar.gz
+    dest: /opt
+    mode: "u=rwx,g=rx,o=rx"
 
 - command: "{{ item }}" 
   with_items:
-    - "echo 'pkg install fuzzy-logic-toolkit-0.4.5.tar.gz' | octave"
+    - "echo 'pkg install /opt/fuzzy-logic-toolkit-0.4.5.tar.gz' | octave"
+    - "echo 'pkg list' | octave"
 
 
 
