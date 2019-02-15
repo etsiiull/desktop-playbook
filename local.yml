@@ -8,6 +8,7 @@
 - hosts: localhost, all
   roles:
 #   - { role: quitasssd, tags: ['sd'] }
+    - { role: fuzzylogic, tags: ['fuzzylogic'] }
     - { role: atom, tags: ['atom'] }
     - { role: libpulse, tags: ['lp'] }
     - { role: google-chrome, tags: ['gc'] }
