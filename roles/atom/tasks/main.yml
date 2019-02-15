@@ -28,6 +28,8 @@
   command: "{{ item }}" 
   with_items:
     - "/opt/atom-1.34.0-amd64/resources/app/apm/bin/apm install --packages-file /opt/atom/my_atom_packages.txt"
+  environment:
+    ATOM_HOME: /opt/.atom   
 
 - name: "link"
   file:
@@ -36,6 +38,14 @@
       owner: root
       group: root
       state: link
+
+- name: "atom hoe"
+  copy:
+      src: template/etc/profile.d/atom.sh
+      dest: /etc/profile.d/atom.sh
+      owner: root
+      group: root
+      mode: "u=rw,g=r,o=r"
 
 
 
