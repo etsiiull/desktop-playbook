@@ -13,7 +13,7 @@
     - { role: eclipse-u18, tags: ['e18'] }
     - { role: installsoftware1-u1804, tags: ['sd0'] }
     - { role: installsoftware2-u1804, tags: ['sd1'] }
-    - { role: profile-env-alias-scripts, tags: ['sd'] }
+    - { role: profile-env-alias-scripts, tags: ['path'] }
 #   - { role: quitasssd, tags: ['sd'] }
     - { role: rutacorta, tags: ['ir'] }
     - { role: bug-eclipse, tags: ['eclipse'] }
@@ -24,7 +24,7 @@
     - { role: node, tags: ['edu'] }
     - { role: nodepackages, tags: ['edu'] }
     - { role: hub, tags: ['edu'] }
-    - { role: setdefaultpath, tags: ['aa']}
+#    - { role: setdefaultpath, tags: ['aa']}
     - { role: kgpg, tags: ['aa'] }
 #   - { role: cron-actualizasistema, tags: ['n'] }
     - ansibleupdate
@@ -33,7 +33,7 @@
     - { role: usuariolocal, tags: ['ul']}
     - { role: emacs, tags: ['p'] }
     - { role: mazesolver, tags: ['p'] }
-    - { role: weka, tags: ['p'] }
+    - { role: weka, tags: ['weka'] }
     - { role: gemas-ruby, tags: ['edu'] }
 
     # Configure servers with ruby support system wide
